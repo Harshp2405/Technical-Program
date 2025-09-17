@@ -971,3 +971,27 @@ function countPrimes(n) {
 
     return arr.filter(Boolean).length;
 }
+
+function RotateArray(array){
+    let M = array.length
+    let N = array[0].length
+
+
+    const Rotated = Array.from({ length: N }, () => Array(M));
+
+    for (let i = 0; i < M; i++) {
+        for (let j = 0; j < N; j++) {
+            Rotated[j][M-1-i] = array[i][j] 
+        }
+        
+    }
+
+    return Rotated;
+}
+const matrix = [
+  [1, 2],
+  [3, 4],
+  [5, 6]
+];
+const ansofrotarr = RotateArray(matrix)
+console.log(ansofrotarr);
